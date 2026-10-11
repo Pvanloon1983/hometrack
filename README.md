@@ -21,4 +21,4 @@ Outputs:
 
 ## Tech Stack
 
-Laravel/PHP/SQLite
+Laravel/PHP/SQLite.
