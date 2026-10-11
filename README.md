@@ -10,4 +10,15 @@ People often loose track of important information of their products. This app ca
 
 ## Current Features
 
+API endpoint: /health
+
+Outputs:
+{
+"status": "ok",
+"application": "HomeTrack",
+"version": "v1"
+}
+
 ## Tech Stack
+
+Laravel/PHP/SQLite
