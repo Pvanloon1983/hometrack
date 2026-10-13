@@ -10,7 +10,7 @@ class ItemController extends Controller
 {
     public function store(Request $request)
     {
-        $validate = $request->validate([
+        $validated = $request->validate([
             'name'              => ['required', 'string', 'max:255'],
             'category'          => ['nullable', 'string', 'max:255'],
             'purchase_date'     => ['nullable', 'date'],
@@ -19,8 +19,8 @@ class ItemController extends Controller
             'notes'             => ['nullable', 'string']
         ]);
 
-        Item::create($validate);
+        $item = Item::create($validated);
 
-        return response()->json('Item is has been created', 201);
+        return response()->json($item, 201);
     }
 }
